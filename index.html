@@ -334,9 +334,9 @@
 
         <div class="tab-content active" id="prediction">
             <h2>MRI Classification</h2>
-            <p>Upload a 3D MRI scan in NIfTI format (.nii or .nii.gz) to classify it as Control, Alzheimer's Disease, or Mild Cognitive Impairment (MCI).</p>
+            <p>Upload a 3D MRI scan in NIfTI format (.nii) to classify it as Control, Alzheimer's Disease, or MCI.</p>
             <div class="input-group">
-                <input type="file" id="file-input" accept=".nii,.nii.gz">
+                <input type="file" id="file-input" accept=".nii">
             </div>
 
             <div class="button-group">
@@ -351,12 +351,12 @@
             </div>
 
             <div class="result hidden" id="result"></div>
-            <a id="download-link" style="display: none; margin-top: 10px;">Detailed Report</a>
+            <a id="download-link" style="display: none; margin-top: 10px;">Download Report</a>
         </div>
 
         <div class="tab-content" id="model">
             <h2>Model Metrics</h2>
-            <p>The following table presents the performance metrics of our 3D MRI classification model. These metrics were obtained on a held-out test set, separate from the training data.</p>
+            <p>The following table presents the performance metrics of our 3D MRI classification model. These metrics were obtained on a held-out test set, separate from the training data</p>
             <table class="metrics-table">
                 <thead>
                     <tr>
@@ -369,27 +369,27 @@
                     <tr>
                         <td>Accuracy</td>
                         <td>0.90</td>
-                        <td>Overall correctness of classifications.</td>
+                        <td>Overall correctness of classifications</td>
                     </tr>
                     <tr>
                         <td>Precision (Control)</td>
                         <td>0.88</td>
-                        <td>Correct positive predictions for Control.</td>
+                        <td>Correct positive predictions for Control</td>
                     </tr>
                     <tr>
                         <td>Recall (Control)</td>
                         <td>0.92</td>
-                        <td>Actual positives correctly identified for Control.</td>
+                        <td>Actual positives correctly identified for Control</td>
                     </tr>
                     <tr>
                         <td>Precision (Alzheimer's)</td>
                         <td>0.91</td>
-                        <td>Correct positive predictions for Alzheimer's.</td>
+                        <td>Correct positive predictions for Alzheimer's</td>
                     </tr>
                     <tr>
                         <td>Recall (Alzheimer's)</td>
                         <td>0.89</td>
-                        <td>Actual positives correctly identified for Alzheimer's.</td>
+                        <td>Actual positives correctly identified for Alzheimer's</td>
                     </tr>
                     <tr>
                         <td>Precision (MCI)</td>
@@ -399,75 +399,61 @@
                     <tr>
                         <td>Recall (MCI)</td>
                         <td>0.82</td>
-                        <td>Actual positives correctly identified for MCI.</td>
+                        <td>Actual positives correctly identified for MCI</td>
                     </tr>
                     <tr>
                         <td>F1-Score (Average)</td>
                         <td>0.87</td>
-                        <td>Harmonic mean of precision and recall (averaged across classes).</td>
+                        <td>Harmonic mean of precision and recall (averaged of classes)</td>
                     </tr>
                     <tr>
                         <td>Validation Accuracy</td>
                         <td>0.89</td>
-                        <td>Correct classifications on a validation dataset.</td>
+                        <td>Correct classifications on a validation dataset</td>
                     </tr>
                 </tbody>
             </table>
-            <p>These metrics indicate strong performance in distinguishing between Control, Alzheimer's, and MCI cases. However, it's crucial to remember that no model is perfect, and these results should be interpreted in conjunction with clinical expertise.</p>
             <h3>Sample Run</h3>
-            <p>To explore the model's capabilities, try uploading NIfTI images with diverse characteristics:</p>
+            <p>To explore our model, try to uploadd NIfTI images with diverse labels:</p>
             <ul>
-                <li>Clear cases of healthy controls.</li>
+                <li>Clear cases of healthy controls</li>
                 <li>Confirmed Alzheimer's disease cases with varying degrees of atrophy.</li>
-                <li>MCI cases, including those that are stable and those that progress to Alzheimer's.</li>
-                <li>Images with common artifacts or noise to evaluate the model's robustness.</li>
+                <li>MCI cases, including those that are stable and those that progress to Alzheimer's</li>
             </ul>
         </div>
 
         <div class="tab-content" id="about">
             <h2>About This Tool</h2>
-            <p>This web application provides a user-friendly interface for classifying 3D MRI brain scans into three categories: Control (healthy individuals), Alzheimer's Disease, and Mild Cognitive Impairment (MCI).</p>
+            <p>This is a web application provides a user-friendly interface for classifying 3D MRI brain scans into three categories: Control (healthy individuals), Alzheimer's Disease, and Mild Cognitive Impairment (MCI).</p>
 
             <h3>Model Selection Criteria</h3>
             <p>Our model was selected based on rigorous evaluation and comparison with other state-of-the-art methods. Key factors considered during model selection included:</p>
             <ul>
                 <li>High accuracy, precision, recall, and F1-score on a held-out test set, ensuring reliable performance on unseen data.</li>
                 <li>Robustness to variations in image acquisition parameters (e.g., scanner type, resolution), making the model applicable to a wider range of MRI data.</li>
-                <li>Good generalization ability to unseen MRI data from different sources, demonstrating the model's ability to perform well in real-world scenarios.</li>
                 <li>Ability to handle the three-class classification problem (Control, Alzheimer's, MCI) effectively, providing a comprehensive diagnostic aid.</li>
             </ul>
-            <h3>Intended Use</h3>
-            <p>This tool is intended for research and educational purposes only. It is *not* a substitute for professional medical advice, diagnosis, or treatment. The results should be interpreted by qualified healthcare professionals in conjunction with other clinical information.</p>
 
             <h3>Our Team</h3>
             <ul>
-                <li>[Your Name/Team Member 1] - Data Scientist/AI Engineer</li>
-                <li>[Team Member 2] - Radiologist/Medical Expert</li>
-                <li>[Team Member 3] - Software Developer</li>
-                <li>[Advisor/Professor, if applicable] - [Title]</li>
+                <li>Toqa Khaled - Computational Biologist</li>
+                <li>Suhaila Samir - Computational Biologist</li>
+                <li>Abdelrahman Fouad- Computational Biologist</li>
             </ul>
 
-            <h3>Acknowledgements</h3>
-            <p>We gratefully acknowledge the following contributions:</p>
-            <ul>
-                <li>[Dataset Source, e.g., ADNI, OASIS] - For providing the MRI data used in model training and evaluation. We adhere to all data usage agreements and ethical guidelines.</li>
-                <li>[Any collaborating institutions or individuals] - For their valuable input and support.</li>
-                <li>[Funding sources, if applicable] - For financial support that made this project possible.</li>
-            </ul>
 
             <h3>Contact</h3>
-            <p>For questions, feedback, or inquiries, please contact us at: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>For questions, feedback, or inquiries, please contact us at: <a href="mailto:s-toqa.ashmawy@zewailcity.edu.eg">ys-toqa.ashmawy@zewailcity.edu.eg</a></p>
         </div>
 
         <div class="tab-content" id="usage">
             <h2>Usage Guide</h2>
-            <p>Follow these steps to use the MRI Classifier:</p>
+            <p>Follow these steps to use our MRI Classifier:</p>
 
             <h3>Step 1: Prepare Your Image</h3>
             <ul>
-                <li>Ensure your MRI scan is in NIfTI format (.nii or .nii.gz).</li>
-                <li>No preprocessing is required on your part; the model handles this internally.</li>
-                <li>For optimal results, use T1-weighted MRI scans.</li>
+                <li>Ensure your MRI scan is in NIfTI format (.nii)</li>
+                <li>No preprocessing is required on your part, our backend applies the preprocessing that fits our model</li>
             </ul>
 
             <h3>Step 2: Upload the Image</h3>
@@ -485,16 +471,12 @@
             <h3>Step 4: View the Results</h3>
             <ul>
                 <li>Once the analysis is complete, the prediction (Control, Alzheimer's, or MCI) will be displayed below the progress bar.</li>
-                <li>A "Detailed Report" button will also appear. Click this button to download a PDF report containing the prediction and other information.</li>
+                <li>A "Detailed Report" button will also appear. Click this button to download a PDF report containing the prediction (confedince, Medical recommendations)</li>
             </ul>
 
-            <h3>Step 5: Clear the Input</h3>
-            <ul>
-                <li>To analyze another image, click the "Clear Input" button. This will clear the file selection and the results.</li>
-            </ul>
             <h3>Troubleshooting</h3>
             <ul>
-                <li><strong>Invalid File Type:</strong> If you see an error message about an invalid file type, ensure you are uploading a .nii or .nii.gz file.</li>
+                <li><strong>Invalid File Type:</strong> If you see an error message about an invalid file type, ensure you are uploading a .nii file.</li>
                 <li><strong>Processing Error:</strong> If an error occurs during processing, try again. If the problem persists, please contact us.</li>
                 <li><strong>Slow Processing:</strong> Processing time can vary depending on the image size and server load. Please be patient.</li>
             </ul>
@@ -502,13 +484,14 @@
     </div>
 
     <footer>
-        <p>© 2025, [Your Team/Organization Name]</p>
+        <p>© 2025,  Bioinformatics and Computational biology Unit, BCBU</p>
         <address>
-            [Your Organization Address, if applicable]<br>
-            [City, State, Zip Code]
+            Bioinformatics and Computational biology Unit at Zewail City,<br>
+            Ahmed Zewail Street, October Gardens, Giza, Egypt
         </address>
     </footer>
 
+    // will update it when connect to the backend
     <script type="module">
         import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client/+esm";
         window.gradio = { client };
@@ -540,7 +523,7 @@
 
         async function initClient() {
             try {
-                clientInstance = await window.gradio.client("your_username/your_mri_classifier");
+                clientInstance = await window.gradio.client("nonzeroexitali/your_mri_classifier");
             } catch (error) {
                 console.error("Failed to initialize Gradio client:", error);
                 showError("Failed to connect to the classifier service. Please try again later.");
